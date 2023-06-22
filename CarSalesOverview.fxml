@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filipe Nogueira Santos - ID: 200534531
+MidTerm Exam - 23S Adv Object Oriented Prog-Java - 200 COMP1011-23S-31928-->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f22midterm.Controller">
+    <children>
+        <!-- Car Table -->
+        <TableView fx:id="carTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <!--car id -->
+                <TableColumn text="CAR ID" fx:id="carIdColumn"/>
+                <!-- model year-->
+                <TableColumn text="MODEL YEAR" fx:id="modelYearColumn"/>
+                <!--maker-->
+                <TableColumn text="MAKER" fx:id="makeColumn"/>
+                <!-- Model-->
+                <TableColumn text="MODEL" fx:id="modelColumn"/>
+                <!-- Price-->
+                <TableColumn text="PRICE" fx:id="priceColumn"/>
+                <!-- sold Date-->
+                <TableColumn text="DATE SOLD" fx:id="dateSoldColumn"/>
+            </columns>
+        </TableView>
+        <!-- Chart Container -->
+        <HBox fx:id="chartContainer" spacing="10">
+            <children>
+
+                <!-- Bar Chart -->
+                <BarChart fx:id="barChart" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" label="Maker"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" label="Units Sold" upperBound="300"/>
+                    </yAxis>
+                </BarChart>
+                <!--Labels -->
+                <VBox spacing="40" alignment="CENTER">
+                    <VBox alignment="CENTER">
+                        <!-- Units Sold Label -->
+                        <Label fx:id="unitsSoldLabel" style="-fx-font-weight: bold;"/>
+                        <!-- Total Sales Label -->
+                        <Label fx:id="totalSalesLabel" style="-fx-font-weight: bold;"/>
+                    </VBox>
+                    <!-- filter dropdown -->
+                    <ComboBox fx:id="yearFilterComboBox" style="-fx-font-weight: bold;"/>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
